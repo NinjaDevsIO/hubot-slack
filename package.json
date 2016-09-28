@@ -22,7 +22,10 @@
     "jsdom": "^5.3.0",
     "soupselect": "^0.2.0",
     "underscore": "^1.8.3",
-    "underscore.string": "^3.0.3"
+    "underscore.string": "^3.0.3",
+    "cron": "^1.0.9",
+    "html-entities": "^1.1.2",
+    "htmlparser": "^1.7.7"
   },
   "engines": {
     "node": "0.10.x"
