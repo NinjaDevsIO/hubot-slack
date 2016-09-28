@@ -105,7 +105,7 @@ module.exports = (robot) ->
     delete robot.brain.data.eval?[msg.message.user.name]?
     msg.send "canceled #{msg.message.user.name}'s evaluation recording"
 
-  robot.respond /eval( me)? ([^ ]+) (.+)/i, (msg) ->
+  robot.respond /eval( me)? ([^ ]+) `(.+)`/i, (msg) ->
     lang = msg.match[2]
     return if lang in ['on', 'off', 'finish', 'done', 'cancel']
 
@@ -114,7 +114,7 @@ module.exports = (robot) ->
         msg.send "Unknown language #{lang} - use eval list command for languages"
         return
 
-      run_eval(lang, msg.match[3], msg)
+      run_eval(lang, msg.match[3].replace('’', '\'').replace(/[“”]/,'"'), msg)
 
     lang_valid(robot, lang, is_valid)
 

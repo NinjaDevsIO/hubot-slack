@@ -12,7 +12,7 @@ module.exports = (robot) ->
   # COMANDO: hubot saluda
   #
   robot.respond /saluda(?: a(.*))?/i, (msg) ->
-    subject = if msg.match.length > 1 then msg.match[1] else '';
+    subject = if msg?.match?[1] then msg.match[1] else '';
     msg.send "Saludos #{subject} de parte de NinjaDevs!"
 
   #
