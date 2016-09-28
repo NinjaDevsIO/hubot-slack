@@ -1,0 +1,8 @@
+{
+  "match": "greet",
+  "description": "hubot greet - @hubot will answer 'Hello, World!'",
+  "listener": "respond",
+  "response": [
+    "Hello, World!"
+  ]
+}
