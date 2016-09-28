@@ -11,8 +11,9 @@ module.exports = (robot) ->
   #
   # COMANDO: hubot saluda
   #
-  robot.respond /saluda/i, (msg) ->
-    msg.send "Saludos de parte de 18Techs!"
+  robot.respond /saluda(?: a(.*))?/i, (msg) ->
+    subject = if msg.match.length > 1 then msg.match[1] else '';
+    msg.send "Saludos #{subject} de parte de NinjaDevs!"
 
   #
   # COMANDO: hubot regaña a <user name>
