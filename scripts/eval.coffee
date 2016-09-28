@@ -69,7 +69,7 @@ module.exports = (robot) ->
         lang_msg += "#{id}: #{desc}\n"
       msg.send lang_msg
 
-  robot.respond /eval[,:]? +on +([a-z]+) *$/i, (msg) ->
+  robot.respond /eval[,:]? +on +([^ ]+) *$/i, (msg) ->
     robot.brain.data.eval or= {}
     lang = msg.match[1]
 
@@ -114,7 +114,7 @@ module.exports = (robot) ->
         msg.send "Unknown language #{lang} - use eval list command for languages"
         return
 
-      run_eval(lang, msg.match[3].replace('’', '\'').replace(/[“”]/g,'"'), msg)
+      run_eval(lang, msg.match[3].replace(/[’‘]/, '\'').replace(/[“”]/g,'"'), msg)
 
     lang_valid(robot, lang, is_valid)
 
