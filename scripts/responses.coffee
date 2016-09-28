@@ -13,7 +13,7 @@ module.exports = (robot) ->
   #
   robot.respond /saluda(?: a(.*))?/i, (msg) ->
     subject = if msg?.match?[1] then msg.match[1] else '';
-    msg.send "Saludos #{subject} de parte de NinjaDevs!"
+    msg.send "Saludos#{subject} de parte de NinjaDevs!"
 
   #
   # COMANDO: hubot regaña a <user name>
