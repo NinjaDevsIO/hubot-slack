@@ -25,11 +25,16 @@ module.exports = (robot) ->
 
     # Checks if the first word of the message is an existing command.
     command = msg.match[1].trim()
+    command = command.split(' ')[0]
+
+    console.log("command", command);
 
     commands = robot.helpCommands().map (command) ->
       command.split(' ')[1]
 
     commandExists = commands.indexOf(command)
+
+    console.log(commandExists)
 
     # If there is no command registered send over the message to cleverbot.
     if (commandExists == -1)
