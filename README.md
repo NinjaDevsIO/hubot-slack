@@ -25,13 +25,13 @@ You can start ninjadevsio-hubot locally by running:
 You'll see some start up output and a prompt:
 
     [Sat Feb 28 2015 12:38:27 GMT+0000 (GMT)] INFO Using default redis on localhost:6379
-    ninjadevsio-hubot>
+    hubot>
 
 Then you can interact with ninjadevsio-hubot by typing `ninjadevsio-hubot help`.
 
-    ninjadevsio-hubot> ninjadevsio-hubot help
-    ninjadevsio-hubot animate me <query> - The same thing as `image me`, except adds [snip]
-    ninjadevsio-hubot help - Displays all of the help commands that ninjadevsio-hubot knows about.
+    hubot> hubot help
+    hubot animate me <query> - The same thing as `image me`, except adds [snip]
+    hubot help - Displays all of the help commands that ninjadevsio-hubot knows about.
     ...
 
 ### Configuration
