@@ -114,7 +114,7 @@ module.exports = (robot) ->
         msg.send "Unknown language #{lang} - use eval list command for languages"
         return
 
-      run_eval(lang, msg.match[3].replace(/[’‘]/, '\'').replace(/[“”]/g,'"'), msg)
+      run_eval(lang, msg.match[3].replace(/[’‘]/g, '\'').replace(/[“”]/g,'"'), msg)
 
     lang_valid(robot, lang, is_valid)
 
