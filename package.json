@@ -6,7 +6,13 @@
   "description": "A simple helpful robot for your Company",
   "dependencies": {
     "cleverbot-node": "^0.2.2",
+    "cron": "^1.0.9",
+    "html-entities": "^1.1.2",
+    "htmlparser": "^1.7.7",
     "hubot": "^2.19.0",
+    "hubot-9gag": "^0.2.0",
+    "hubot-caniuse": "^1.0.3",
+    "hubot-devops-reactions": "^1.0.2",
     "hubot-diagnostics": "0.0.1",
     "hubot-google-images": "^0.2.6",
     "hubot-help": "^0.2.0",
@@ -14,18 +20,13 @@
     "hubot-maps": "0.0.2",
     "hubot-redis-brain": "0.0.3",
     "hubot-response": "^1.2.0",
-    "hubot-slack": "^4.1.0",
     "hubot-shipit": "^0.2.0",
-    "hubot-caniuse": "^1.0.3",
-    "hubot-devops-reactions": "^1.0.2",
+    "hubot-slack": "^4.1.0",
     "hubot-youtube": "^0.1.2",
     "jsdom": "^5.3.0",
     "soupselect": "^0.2.0",
     "underscore": "^1.8.3",
-    "underscore.string": "^3.0.3",
-    "cron": "^1.0.9",
-    "html-entities": "^1.1.2",
-    "htmlparser": "^1.7.7"
+    "underscore.string": "^3.0.3"
   },
   "engines": {
     "node": "0.10.x"
