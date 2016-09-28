@@ -5,5 +5,9 @@
   "hubot-google-images",
   "hubot-maps",
   "hubot-redis-brain",
-  "hubot-response"
+  "hubot-response",
+  "hubot-shipit",
+  "hubot-youtube",
+  "hubot-devops-reactions",
+  "hubot-caniuse"
 ]
