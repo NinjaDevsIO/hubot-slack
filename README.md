@@ -27,11 +27,11 @@ You'll see some start up output and a prompt:
     [Sat Feb 28 2015 12:38:27 GMT+0000 (GMT)] INFO Using default redis on localhost:6379
     hubot>
 
-Then you can interact with ninjadevsio-hubot by typing `ninjadevsio-hubot help`.
+Then you can interact with hubot by typing `hubot help`.
 
     hubot> hubot help
     hubot animate me <query> - The same thing as `image me`, except adds [snip]
-    hubot help - Displays all of the help commands that ninjadevsio-hubot knows about.
+    hubot help - Displays all of the help commands that hubot knows about.
     ...
 
 ### Configuration

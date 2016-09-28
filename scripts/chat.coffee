@@ -37,7 +37,7 @@ module.exports = (robot) ->
       data = msg.match[1].trim()
       cleverbot.prepare(( -> c.write(data, (c) => msg.send(c.message))))
 
-      
+
   # Have hubot respond to the chat command.
   robot.respond /chat(.*)/i, (msg) ->
 
