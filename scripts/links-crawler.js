@@ -31,14 +31,14 @@ module.exports = function (robot) {
 
   var isUrlAllowed = function (url) {
     for (var i = 0, l = blackList.length; i < l; i++) {
-      if (url.indexOf(blackList[i]) >= 0) {
+      if (url.toLowerCase().indexOf(blackList[i]) >= 0) {
         return false;
       }
     }
 
     var re;
     for (var i = 0, l = blackListExtensions.length; i < l; i++) {
-      re = new RegExp('\\.' + blackListExtensions[i] + '$|\\.' + blackListExtensions[i] + '\\W');
+      re = new RegExp('\\.' + blackListExtensions[i] + '$|\\.' + blackListExtensions[i] + '\\W', 'i');
       if (re.test(url)) {
         return false;
       }
