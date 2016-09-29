@@ -66,7 +66,8 @@ module.exports = function (robot) {
   };
 
   robot.listen(function (msg) {
-    robot.logger.info('Message from room', msg.room);
+    // For debugging the channel id
+    // robot.logger.info('Message from room', msg.room);
     checkEnv();
 
     if (listenChannel && msg.room !== listenChannel) {
