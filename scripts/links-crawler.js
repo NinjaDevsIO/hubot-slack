@@ -20,6 +20,7 @@ var Trello = require('trello');
 
 module.exports = function (robot) {
   var blackList = [];
+  var blackListExtensions = [];
   var listenChannel = false;
   var postToChannel = false;
 
@@ -31,6 +32,14 @@ module.exports = function (robot) {
   var isUrlAllowed = function (url) {
     for (var i = 0, l = blackList.length; i < l; i++) {
       if (url.indexOf(blackList[i]) >= 0) {
+        return false;
+      }
+    }
+
+    var re;
+    for (var i = 0, l = blackListExtensions.length; i < l; i++) {
+      re = new RegExp('\\.' + blackListExtensions[i] + '$|\\.' + blackListExtensions[i] + '\\W');
+      if (re.test(url)) {
         return false;
       }
     }
@@ -61,6 +70,7 @@ module.exports = function (robot) {
 
   var checkEnv = function () {
     blackList = (process.env.HUBOT_LINK_CRAWLER_BLACK_LIST || '').split(',');
+    blackListExtensions = (process.env.HUBOT_LINK_CRAWLER_BLACK_LIST_EXTENSIONS || '').split(',');
     listenChannel = process.env.HUBOT_LINK_CRAWLER_LISTEN_CHANNEL || false;
     postToChannel = process.env.HUBOT_LINK_CRAWLER_POST_TO_CHANNEL || false;
   };
@@ -120,7 +130,8 @@ module.exports = function (robot) {
           }
         })
         .then(function (card) {
-          res.send('Trello card created');
+          // res.send('Trello card created');
+          robot.logger.info('Trello card created ' + card.id);
         });
       });
     });
