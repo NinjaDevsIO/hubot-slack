@@ -99,13 +99,13 @@ module.exports = function (robot) {
     }
   }, function (res) {
     if (!checkEnvTrello()) {
-      return;
+      return res.send('Can\'t create Trello cards, missing key or secret');
     }
 
     res.match.forEach(function (url) {
       SiteMeta.scrape(url, function (err, info) {
         if (err) {
-          return res.send('Can\'t create Trello cards, missing key or secret');
+          return;
         }
 
         var meta = info.meta.og ? info.meta.og :
